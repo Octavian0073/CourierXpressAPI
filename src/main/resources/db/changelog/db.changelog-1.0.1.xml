@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <changeSet id= "9" author="octa">
+        <insert tableName="City">
+            <column name="cityName" value="Oradea" />
+            <column name="hasOffice" valueBoolean="true" />
+        </insert>
+        <insert tableName="City">
+            <column name="cityName" value="Arad" />
+            <column name="hasOffice" valueBoolean="false" />
+        </insert>
+        <insert tableName="City">
+            <column name="cityName" value="Timisoara" />
+            <column name="hasOffice" valueBoolean="true" />
+        </insert>
+        <insert tableName="City">
+            <column name="cityName" value="Cluj" />
+            <column name="hasOffice" valueBoolean="false" />
+        </insert>
+        <insert tableName="City">
+            <column name="cityName" value="Deva" />
+            <column name="hasOffice" valueBoolean="false" />
+        </insert>
+        <insert tableName="City">
+            <column name="cityName" value="Sibiu" />
+            <column name="hasOffice" valueBoolean="false" />
+        </insert>
+        <insert tableName="City">
+            <column name="cityName" value="Brasov" />
+            <column name="hasOffice" valueBoolean="true" />
+        </insert>
+        <insert tableName="City">
+            <column name="cityName" value="Bucuresti" />
+            <column name="hasOffice" valueBoolean="true" />
+        </insert>
+        <insert tableName="City">
+            <column name="cityName" value="Targu Mures" />
+            <column name="hasOffice" valueBoolean="false" />
+        </insert>
+    </changeSet>
+
+    <changeSet id="10" author="octa">
+        <insert tableName="Path">
+            <column name="fromCityId" value="1" />
+            <column name="toCityId1" value="2" />
+            <column name="toCityId2" value="3" />
+        </insert>
+        <insert tableName="Path">
+            <column name="fromCityId" value="3" />
+            <column name="toCityId1" value="2" />
+            <column name="toCityId2" value="1" />
+        </insert>
+        <insert tableName="Path">
+            <column name="fromCityId" value="1" />
+            <column name="toCityId1" value="4" />
+            <column name="toCityId2" value="9" />
+            <column name="toCityId3" value="7" />
+        </insert>
+        <insert tableName="Path">
+            <column name="fromCityId" value="7" />
+            <column name="toCityId1" value="9" />
+            <column name="toCityId2" value="4" />
+            <column name="toCityId3" value="1" />
+        </insert>
+        <insert tableName="Path">
+            <column name="fromCityId" value="1" />
+            <column name="toCityId1" value="4" />
+            <column name="toCityId2" value="9" />
+            <column name="toCityId3" value="7" />
+            <column name="toCityId4" value="8" />
+        </insert>
+        <insert tableName="Path">
+            <column name="fromCityId" value="8" />
+            <column name="toCityId1" value="7" />
+            <column name="toCityId2" value="9" />
+            <column name="toCityId3" value="4" />
+            <column name="toCityId4" value="1" />
+        </insert>
+        <insert tableName="Path">
+            <column name="fromCityId" value="3" />
+            <column name="toCityId1" value="5" />
+            <column name="toCityId2" value="6" />
+            <column name="toCityId3" value="7" />
+        </insert>
+        <insert tableName="Path">
+            <column name="fromCityId" value="7" />
+            <column name="toCityId1" value="6" />
+            <column name="toCityId2" value="5" />
+            <column name="toCityId3" value="3" />
+        </insert>
+        <insert tableName="Path">
+            <column name="fromCityId" value="3" />
+            <column name="toCityId1" value="5" />
+            <column name="toCityId2" value="6" />
+            <column name="toCityId3" value="7" />
+            <column name="toCityId4" value="8" />
+        </insert>
+        <insert tableName="Path">
+            <column name="fromCityId" value="8" />
+            <column name="toCityId1" value="7" />
+            <column name="toCityId2" value="6" />
+            <column name="toCityId3" value="5" />
+            <column name="toCityId4" value="3" />
+        </insert>
+        <insert tableName="Path">
+            <column name="fromCityId" value="7" />
+            <column name="toCityId1" value="8" />
+        </insert>
+        <insert tableName="Path">
+            <column name="fromCityId" value="8" />
+            <column name="toCityId1" value="7" />
+        </insert>
+    </changeSet>
+
+    <changeSet id="11" author="octa">
+        <insert tableName="Route">
+            <column name="fromCityId" value="1" />
+            <column name="toCityId" value="3" />
+            <column name="transportType" value="SPECIAL" />
+            <column name="pathId" value="1"/>
+            <column name="distance" value="173"/>
+        </insert>
+        <insert tableName="Route">
+            <column name="fromCityId" value="3" />
+            <column name="toCityId" value="1" />
+            <column name="transportType" value="SPECIAL" />
+            <column name="pathId" value="2"/>
+            <column name="distance" value="173"/>
+        </insert>
+        <insert tableName="Route">
+            <column name="fromCityId" value="3" />
+            <column name="toCityId" value="7" />
+            <column name="transportType" value="SPECIAL" />
+            <column name="pathId" value="7"/>
+            <column name="distance" value="413"/>
+        </insert>
+        <insert tableName="Route">
+            <column name="fromCityId" value="7" />
+            <column name="toCityId" value="3" />
+            <column name="transportType" value="SPECIAL" />
+            <column name="pathId" value="8"/>
+            <column name="distance" value="413"/>
+        </insert>
+        <insert tableName="Route">
+            <column name="fromCityId" value="7" />
+            <column name="toCityId" value="8" />
+            <column name="transportType" value="SPECIAL" />
+            <column name="pathId" value="11"/>
+            <column name="distance" value="184"/>
+        </insert>
+        <insert tableName="Route">
+            <column name="fromCityId" value="8" />
+            <column name="toCityId" value="7" />
+            <column name="transportType" value="SPECIAL" />
+            <column name="pathId" value="12"/>
+            <column name="distance" value="184"/>
+        </insert>
+        <insert tableName="Route">
+            <column name="fromCityId" value="3" />
+            <column name="toCityId" value="8" />
+            <column name="transportType" value="SPECIAL" />
+            <column name="pathId" value="9"/>
+            <column name="distance" value="545"/>
+        </insert>
+        <insert tableName="Route">
+            <column name="fromCityId" value="8" />
+            <column name="toCityId" value="3" />
+            <column name="transportType" value="SPECIAL" />
+            <column name="pathId" value="10"/>
+            <column name="distance" value="545"/>
+        </insert>
+        <insert tableName="Route">
+            <column name="fromCityId" value="1" />
+            <column name="toCityId" value="7" />
+            <column name="transportType" value="SPECIAL" />
+            <column name="pathId" value="3"/>
+            <column name="distance" value="419"/>
+        </insert>
+        <insert tableName="Route">
+            <column name="fromCityId" value="7" />
+            <column name="toCityId" value="1" />
+            <column name="transportType" value="SPECIAL" />
+            <column name="pathId" value="4"/>
+            <column name="distance" value="419"/>
+        </insert>
+        <insert tableName="Route">
+            <column name="fromCityId" value="1" />
+            <column name="toCityId" value="8" />
+            <column name="transportType" value="SPECIAL" />
+            <column name="pathId" value="5"/>
+            <column name="distance" value="598"/>
+        </insert>
+        <insert tableName="Route">
+            <column name="fromCityId" value="8" />
+            <column name="toCityId" value="1" />
+            <column name="transportType" value="SPECIAL" />
+            <column name="pathId" value="6"/>
+            <column name="distance" value="598"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="12" author="octa">
+        <insert tableName="Roles">
+            <column name="roleName" value="employee" />
+        </insert>
+        <insert tableName="Roles">
+            <column name="roleName" value="driver" />
+        </insert>
+        <insert tableName="Roles">
+            <column name="roleName" value="sender" />
+        </insert>
+        <insert tableName="Roles">
+            <column name="roleName" value="receiver" />
+        </insert>
+    </changeSet>
+
+    <changeSet id="13" author="octa">
+        <insert tableName="Person">
+            <column name="personName" value="John Doe" />
+            <column name="cityId" value="1" />
+            <column name="personPhone" value="0711111111" />
+            <column name="personRole" value="2" />
+        </insert>
+        <insert tableName="Person">
+            <column name="personName" value="James McAllister" />
+            <column name="cityId" value="3" />
+            <column name="personPhone" value="0722222222" />
+            <column name="personRole" value="2" />
+        </insert>
+        <insert tableName="Person">
+            <column name="personName" value="William Smith" />
+            <column name="cityId" value="7" />
+            <column name="personPhone" value="0733333333" />
+            <column name="personRole" value="2" />
+        </insert>
+        <insert tableName="Person">
+            <column name="personName" value="David Brown" />
+            <column name="cityId" value="8" />
+            <column name="personPhone" value="0744444444" />
+            <column name="personRole" value="2" />
+        </insert>
+        <insert tableName="Person">
+            <column name="personName" value="Oana Cristea" />
+            <column name="cityId" value="1" />
+            <column name="personPhone" value="0755555555" />
+            <column name="personRole" value="1" />
+        </insert>
+        <insert tableName="Person">
+            <column name="personName" value="Emily Davis" />
+            <column name="cityId" value="3" />
+            <column name="personPhone" value="0766666666" />
+            <column name="personRole" value="1" />
+        </insert>
+        <insert tableName="Person">
+            <column name="personName" value="Olivia Anderson" />
+            <column name="cityId" value="7" />
+            <column name="personPhone" value="0777777777" />
+            <column name="personRole" value="1" />
+        </insert>
+        <insert tableName="Person">
+            <column name="personName" value="Charlotte Wilson" />
+            <column name="cityId" value="8" />
+            <column name="personPhone" value="0788888888" />
+            <column name="personRole" value="1" />
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

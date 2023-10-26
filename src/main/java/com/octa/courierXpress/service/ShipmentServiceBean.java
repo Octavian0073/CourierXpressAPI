@@ -5,6 +5,8 @@ import com.octa.courierXpress.model.Route;
 import com.octa.courierXpress.model.Shipment;
 import com.octa.courierXpress.model.ShipmentForUpdateDTO;
 import jakarta.transaction.Transactional;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Service;
 import com.octa.courierXpress.repository.CityRepository;
 import com.octa.courierXpress.repository.PersonRepository;
@@ -16,18 +18,17 @@ import java.util.NoSuchElementException;
 import java.util.Optional;
 
 @Service
+@NoArgsConstructor(force = true)
+@AllArgsConstructor
 public class ShipmentServiceBean implements ShipmentService {
-    private final ShipmentRepository shipmentRepository;
-    private final CityRepository cityRepository;
-    private final PersonRepository personRepository;
-    private final RouteRepository routeRepository;
 
-    public ShipmentServiceBean(ShipmentRepository shipmentRepository, CityRepository cityRepository, PersonRepository personRepository, RouteRepository routeRepository) {
-        this.shipmentRepository = shipmentRepository;
-        this.cityRepository = cityRepository;
-        this.personRepository = personRepository;
-        this.routeRepository = routeRepository;
-    }
+    private final ShipmentRepository shipmentRepository;
+
+    private final CityRepository cityRepository;
+
+    private final PersonRepository personRepository;
+
+    private final RouteRepository routeRepository;
 
     @Override
     public List<Shipment> findAll() { return shipmentRepository.findAll(); }

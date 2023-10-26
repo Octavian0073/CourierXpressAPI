@@ -1,5 +1,7 @@
 package com.octa.courierXpress.service;
 
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Service;
 import jakarta.transaction.Transactional;
 import com.octa.courierXpress.model.Person;
@@ -13,16 +15,16 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
+@NoArgsConstructor(force = true)
+@AllArgsConstructor
 public class PersonServiceBean implements PersonService {
+
     private final PersonRepository personRepository;
+
     private final CityRepository cityRepository;
+
     private final RolesRepository rolesRepository;
 
-    public PersonServiceBean(PersonRepository personRepository, CityRepository cityRepository, RolesRepository rolesRepository) {
-        this.personRepository = personRepository;
-        this.cityRepository = cityRepository;
-        this.rolesRepository = rolesRepository;
-    }
 
     @Override
     public List<Person> findAll() { return personRepository.findAll(); }

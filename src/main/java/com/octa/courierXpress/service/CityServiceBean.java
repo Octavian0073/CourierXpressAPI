@@ -1,17 +1,19 @@
 package com.octa.courierXpress.service;
 
 import com.octa.courierXpress.model.City;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Service;
 import com.octa.courierXpress.repository.CityRepository;
 
 import java.util.List;
 
 @Service
+@NoArgsConstructor(force = true)
+@AllArgsConstructor
 public class CityServiceBean implements CityService {
 
     private final CityRepository cityRepository;
-
-    public CityServiceBean(CityRepository cityRepository) { this.cityRepository = cityRepository; }
 
     @Override
     public List<City> findAll() { return cityRepository.findAll(); }

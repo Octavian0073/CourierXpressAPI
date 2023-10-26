@@ -17,10 +17,10 @@ import java.util.Optional;
 
 @Service
 public class ShipmentServiceBean implements ShipmentService {
-    private ShipmentRepository shipmentRepository;
-    private CityRepository cityRepository;
-    private PersonRepository personRepository;
-    private RouteRepository routeRepository;
+    private final ShipmentRepository shipmentRepository;
+    private final CityRepository cityRepository;
+    private final PersonRepository personRepository;
+    private final RouteRepository routeRepository;
 
     public ShipmentServiceBean(ShipmentRepository shipmentRepository, CityRepository cityRepository, PersonRepository personRepository, RouteRepository routeRepository) {
         this.shipmentRepository = shipmentRepository;

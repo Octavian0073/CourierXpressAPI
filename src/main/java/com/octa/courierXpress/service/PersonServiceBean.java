@@ -14,9 +14,9 @@ import java.util.Optional;
 
 @Service
 public class PersonServiceBean implements PersonService {
-    private PersonRepository personRepository;
-    private CityRepository cityRepository;
-    private RolesRepository rolesRepository;
+    private final PersonRepository personRepository;
+    private final CityRepository cityRepository;
+    private final RolesRepository rolesRepository;
 
     public PersonServiceBean(PersonRepository personRepository, CityRepository cityRepository, RolesRepository rolesRepository) {
         this.personRepository = personRepository;

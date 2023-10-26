@@ -9,8 +9,8 @@ import java.util.List;
 
 @Service
 public class PathServiceBean implements PathService {
-    private PathRepository pathRepository;
-    private CityRepository cityRepository;
+    private final PathRepository pathRepository;
+    private final CityRepository cityRepository;
 
     public PathServiceBean(PathRepository pathRepository, CityRepository cityRepository) {
         this.pathRepository = pathRepository;

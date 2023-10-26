@@ -13,8 +13,8 @@ import java.util.Optional;
 @Service
 public class RouteServiceBean implements RouteService {
 
-    private RouteRepository routeRepository;
-    private CityRepository cityRepository;
+    private final RouteRepository routeRepository;
+    private final CityRepository cityRepository;
 
     public RouteServiceBean(RouteRepository routeRepository, CityRepository cityRepository) {
         this.routeRepository = routeRepository;

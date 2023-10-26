@@ -9,7 +9,7 @@ import java.util.List;
 @Service
 public class CityServiceBean implements CityService {
 
-    private CityRepository cityRepository;
+    private final CityRepository cityRepository;
 
     public CityServiceBean(CityRepository cityRepository) { this.cityRepository = cityRepository; }
 

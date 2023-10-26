@@ -10,7 +10,6 @@ import com.octa.courierXpress.repository.PathRepository;
 import java.util.List;
 
 @Service
-@NoArgsConstructor(force = true)
 @AllArgsConstructor
 public class PathServiceBean implements PathService {
 

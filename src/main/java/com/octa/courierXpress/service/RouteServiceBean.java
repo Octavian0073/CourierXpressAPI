@@ -13,7 +13,6 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-@NoArgsConstructor(force = true)
 @AllArgsConstructor
 public class RouteServiceBean implements RouteService {
 

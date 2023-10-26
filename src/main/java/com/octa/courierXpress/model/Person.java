@@ -16,14 +16,14 @@ public class Person implements Serializable {
     private String personName;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name="cityId", referencedColumnName = "id", insertable = true, updatable = true)
+    @JoinColumn(name="cityId", referencedColumnName = "id")
     private City inCity;
 
     @Column
     private String personPhone;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name="personRole", referencedColumnName = "id", insertable = true, updatable = true)
+    @JoinColumn(name="personRole", referencedColumnName = "id")
     private Roles role;
 
     public Person() { super(); }

@@ -9,7 +9,6 @@ import com.octa.courierXpress.repository.CityRepository;
 import java.util.List;
 
 @Service
-@NoArgsConstructor(force = true)
 @AllArgsConstructor
 public class CityServiceBean implements CityService {
 

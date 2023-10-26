@@ -13,23 +13,23 @@ public class Path implements Serializable {
     private Long id;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name="fromCityId", referencedColumnName = "id", insertable = true, updatable = true)
+    @JoinColumn(name="fromCityId", referencedColumnName = "id")
     private City fromCity;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name="toCityId1", referencedColumnName = "id", insertable = true, updatable = true)
+    @JoinColumn(name="toCityId1", referencedColumnName = "id")
     private City toCity1;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name="toCityId2", referencedColumnName = "id", insertable = true, updatable = true)
+    @JoinColumn(name="toCityId2", referencedColumnName = "id")
     private City toCity2;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name="toCityId3", referencedColumnName = "id", insertable = true, updatable = true)
+    @JoinColumn(name="toCityId3", referencedColumnName = "id")
     private City toCity3;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name="toCityId4", referencedColumnName = "id", insertable = true, updatable = true)
+    @JoinColumn(name="toCityId4", referencedColumnName = "id")
     private City toCity4;
     public Path() { super(); }
 

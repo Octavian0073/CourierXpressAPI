@@ -16,15 +16,15 @@ public class Shipment implements Serializable {
     private Long packageWeight;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name="senderId", referencedColumnName = "id", insertable = true, updatable = true)
+    @JoinColumn(name="senderId", referencedColumnName = "id")
     private Person sender;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name="receiverId", referencedColumnName = "id", insertable = true, updatable = true)
+    @JoinColumn(name="receiverId", referencedColumnName = "id")
     private Person receiver;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name="routeId", referencedColumnName = "id", insertable = true, updatable = true)
+    @JoinColumn(name="routeId", referencedColumnName = "id")
     private Route route;
 
     @Column

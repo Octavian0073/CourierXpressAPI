@@ -18,7 +18,6 @@ import java.util.NoSuchElementException;
 import java.util.Optional;
 
 @Service
-@NoArgsConstructor(force = true)
 @AllArgsConstructor
 public class ShipmentServiceBean implements ShipmentService {
 

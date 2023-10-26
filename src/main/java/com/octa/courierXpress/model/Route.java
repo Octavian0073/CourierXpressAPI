@@ -13,17 +13,17 @@ public class Route implements Serializable {
     private Long id;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name="fromCityId", referencedColumnName = "id", insertable = true, updatable = true)
+    @JoinColumn(name="fromCityId", referencedColumnName = "id")
     private City fromCity;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name="toCityId", referencedColumnName = "id", insertable = true, updatable = true)
+    @JoinColumn(name="toCityId", referencedColumnName = "id")
     private City toCity;
 
     @Column
     private String transportType;
 
-    @JoinColumn(name="pathId", referencedColumnName = "id", insertable = true, updatable = true)
+    @JoinColumn(name="pathId", referencedColumnName = "id")
     private Long pathId;
 
     @Column

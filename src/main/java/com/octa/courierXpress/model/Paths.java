@@ -6,7 +6,7 @@ import java.io.Serializable;
 import java.util.Objects;
 
 @Entity
-public class Route implements Serializable {
+public class Paths implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,37 +23,39 @@ public class Route implements Serializable {
     @Column
     private Long distance;
 
-    public Route() { super(); }
+    public Paths() { super(); }
 
-    public Route(City fromCity, City toCity, Long distance) {
+    public Paths(City fromCity, City toCity, Long distance) {
         super();
         this.fromCity = fromCity;
         this.toCity = toCity;
         this.distance = distance;
     }
 
-    public Long getId() { return id; }
+    public Long getId() {
+        return id;
+    }
 
     public void setId(Long id) { this.id = id; }
 
     public City getFromCity() { return fromCity; }
 
-    public void setFromCity(City fromCity) { this.fromCity = fromCity; }
-
     public City getToCity() { return toCity; }
 
     public void setToCity(City toCity) { this.toCity = toCity; }
 
+    public void setFromCity(City fromCity) { this.fromCity = fromCity; }
+
     public Long getDistance() { return distance; }
 
-    public void setDistance(Long distance) { this.distance = distance;}
+    public void setDistance(Long distance) { this.distance = distance; }
 
     @Override
     public boolean equals(Object o) {
         if(this == o) return true;
         if(o == null || getClass() != o.getClass()) return false;
-        Route route = (Route) o;
-        return id == route.id && Objects.equals(fromCity, route.fromCity) && Objects.equals(toCity, route.toCity) && Objects.equals(distance, route.distance);
+        Paths path = (Paths) o;
+        return id == path.id && Objects.equals(fromCity, path.fromCity) && Objects.equals(toCity, path.toCity) && Objects.equals(distance, path.distance);
     }
 
     @Override
@@ -69,4 +71,3 @@ public class Route implements Serializable {
                 '}';
     }
 }
-

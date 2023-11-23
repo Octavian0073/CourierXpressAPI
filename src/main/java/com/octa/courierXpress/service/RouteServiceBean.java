@@ -4,7 +4,6 @@ import jakarta.transaction.Transactional;
 import com.octa.courierXpress.model.City;
 import com.octa.courierXpress.model.Route;
 import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Service;
 import com.octa.courierXpress.repository.CityRepository;
 import com.octa.courierXpress.repository.RouteRepository;
@@ -30,12 +29,12 @@ public class RouteServiceBean implements RouteService {
     @Override
     public Route create(final Route route) {
         if (route.getId() != null) {
-            throw new IllegalArgumentException("Cannot create new Person with the supplied id. The id attribute must be null to create an entity.");
+            throw new IllegalArgumentException("Cannot create new Person with the supplied name. The id attribute must be null to create an entity.");
         }
 
-        Optional<City> optionalCityFrom = cityRepository.findById(route.getFromCity().getId());
+        Optional<City> optionalCityFrom = Optional.ofNullable(cityRepository.findByCityName(route.getFromCity().getCityName()));
         City from = optionalCityFrom.orElse(null);
-        Optional<City> optionalCityTo = cityRepository.findById(route.getToCity().getId());
+        Optional<City> optionalCityTo = Optional.ofNullable(cityRepository.findByCityName(route.getToCity().getCityName()));
         City to = optionalCityTo.orElse(null);
 
         route.setFromCity(from);

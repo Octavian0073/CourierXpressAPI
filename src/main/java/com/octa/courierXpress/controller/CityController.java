@@ -31,4 +31,12 @@ public class CityController {
 
         return city;
     }
+
+    @GetMapping("/name/{cityName}")
+    public City getCityByName(@PathVariable final String cityName) {
+
+        City city = cityService.findByCityName(cityName);
+
+        return city;
+    }
 }

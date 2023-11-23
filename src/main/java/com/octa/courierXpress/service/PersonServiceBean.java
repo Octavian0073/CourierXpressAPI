@@ -38,7 +38,7 @@ public class PersonServiceBean implements PersonService {
             throw new IllegalArgumentException("Cannot create new Person with the supplied id. The id attribute must be null to create an entity.");
         }
 
-        Optional<City> optionalCity = cityRepository.findById(person.getInCity().getId());
+        Optional<City> optionalCity = Optional.ofNullable(cityRepository.findByCityName(person.getInCity().getCityName()));
         City city = optionalCity.orElse(null);
         Optional<Roles> optionalRole = rolesRepository.findById(person.getRole().getId());
         Roles role = optionalRole.orElse(null);

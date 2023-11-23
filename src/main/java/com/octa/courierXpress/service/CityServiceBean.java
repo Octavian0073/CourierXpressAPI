@@ -2,7 +2,6 @@ package com.octa.courierXpress.service;
 
 import com.octa.courierXpress.model.City;
 import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Service;
 import com.octa.courierXpress.repository.CityRepository;
 
@@ -19,4 +18,7 @@ public class CityServiceBean implements CityService {
 
     @Override
     public City findById(Long id) { return cityRepository.findById(id).get(); }
+
+    @Override
+    public City findByCityName(String cityName) { return cityRepository.findByCityName(cityName); }
 }

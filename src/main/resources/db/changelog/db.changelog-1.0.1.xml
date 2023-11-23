@@ -47,75 +47,80 @@
     </changeSet>
 
     <changeSet id="10" author="octa">
-        <insert tableName="Path">
+        <insert tableName="Paths">
             <column name="fromCityId" value="1" />
-            <column name="toCityId1" value="2" />
-            <column name="toCityId2" value="3" />
+            <column name="toCityId" value="2" />
+            <column name="distance" value="96" />
         </insert>
-        <insert tableName="Path">
-            <column name="fromCityId" value="3" />
-            <column name="toCityId1" value="2" />
-            <column name="toCityId2" value="1" />
-        </insert>
-        <insert tableName="Path">
+        <insert tableName="Paths">
             <column name="fromCityId" value="1" />
-            <column name="toCityId1" value="4" />
-            <column name="toCityId2" value="9" />
-            <column name="toCityId3" value="7" />
+            <column name="toCityId" value="4" />
+            <column name="distance" value="147" />
         </insert>
-        <insert tableName="Path">
-            <column name="fromCityId" value="7" />
-            <column name="toCityId1" value="9" />
-            <column name="toCityId2" value="4" />
-            <column name="toCityId3" value="1" />
-        </insert>
-        <insert tableName="Path">
+        <insert tableName="Paths">
             <column name="fromCityId" value="1" />
-            <column name="toCityId1" value="4" />
-            <column name="toCityId2" value="9" />
-            <column name="toCityId3" value="7" />
-            <column name="toCityId4" value="8" />
+            <column name="toCityId" value="5" />
+            <column name="distance" value="183" />
         </insert>
-        <insert tableName="Path">
-            <column name="fromCityId" value="8" />
-            <column name="toCityId1" value="7" />
-            <column name="toCityId2" value="9" />
-            <column name="toCityId3" value="4" />
-            <column name="toCityId4" value="1" />
+        <insert tableName="Paths">
+            <column name="fromCityId" value="2" />
+            <column name="toCityId" value="3" />
+            <column name="distance" value="57" />
         </insert>
-        <insert tableName="Path">
+        <insert tableName="Paths">
+            <column name="fromCityId" value="2" />
+            <column name="toCityId" value="5" />
+            <column name="distance" value="128" />
+        </insert>
+        <insert tableName="Paths">
             <column name="fromCityId" value="3" />
-            <column name="toCityId1" value="5" />
-            <column name="toCityId2" value="6" />
-            <column name="toCityId3" value="7" />
+            <column name="toCityId" value="5" />
+            <column name="distance" value="114" />
         </insert>
-        <insert tableName="Path">
+        <insert tableName="Paths">
+            <column name="fromCityId" value="4" />
+            <column name="toCityId" value="5" />
+            <column name="distance" value="119" />
+        </insert>
+        <insert tableName="Paths">
+            <column name="fromCityId" value="4" />
+            <column name="toCityId" value="6" />
+            <column name="distance" value="125" />
+        </insert>
+        <insert tableName="Paths">
+            <column name="fromCityId" value="4" />
+            <column name="toCityId" value="9" />
+            <column name="distance" value="93" />
+        </insert>
+        <insert tableName="Paths">
+            <column name="fromCityId" value="5" />
+            <column name="toCityId" value="6" />
+            <column name="distance" value="77" />
+        </insert>
+        <insert tableName="Paths">
+            <column name="fromCityId" value="6" />
+            <column name="toCityId" value="7" />
+            <column name="distance" value="125" />
+        </insert>
+        <insert tableName="Paths">
+            <column name="fromCityId" value="6" />
+            <column name="toCityId" value="8" />
+            <column name="distance" value="231" />
+        </insert>
+        <insert tableName="Paths">
+            <column name="fromCityId" value="6" />
+            <column name="toCityId" value="9" />
+            <column name="distance" value="120" />
+        </insert>
+        <insert tableName="Paths">
             <column name="fromCityId" value="7" />
-            <column name="toCityId1" value="6" />
-            <column name="toCityId2" value="5" />
-            <column name="toCityId3" value="3" />
+            <column name="toCityId" value="8" />
+            <column name="distance" value="159" />
         </insert>
-        <insert tableName="Path">
-            <column name="fromCityId" value="3" />
-            <column name="toCityId1" value="5" />
-            <column name="toCityId2" value="6" />
-            <column name="toCityId3" value="7" />
-            <column name="toCityId4" value="8" />
-        </insert>
-        <insert tableName="Path">
-            <column name="fromCityId" value="8" />
-            <column name="toCityId1" value="7" />
-            <column name="toCityId2" value="6" />
-            <column name="toCityId3" value="5" />
-            <column name="toCityId4" value="3" />
-        </insert>
-        <insert tableName="Path">
+        <insert tableName="Paths">
             <column name="fromCityId" value="7" />
-            <column name="toCityId1" value="8" />
-        </insert>
-        <insert tableName="Path">
-            <column name="fromCityId" value="8" />
-            <column name="toCityId1" value="7" />
+            <column name="toCityId" value="9" />
+            <column name="distance" value="192" />
         </insert>
     </changeSet>
 
@@ -123,85 +128,61 @@
         <insert tableName="Route">
             <column name="fromCityId" value="1" />
             <column name="toCityId" value="3" />
-            <column name="transportType" value="SPECIAL" />
-            <column name="pathId" value="1"/>
             <column name="distance" value="173"/>
         </insert>
         <insert tableName="Route">
             <column name="fromCityId" value="3" />
             <column name="toCityId" value="1" />
-            <column name="transportType" value="SPECIAL" />
-            <column name="pathId" value="2"/>
             <column name="distance" value="173"/>
         </insert>
         <insert tableName="Route">
             <column name="fromCityId" value="3" />
             <column name="toCityId" value="7" />
-            <column name="transportType" value="SPECIAL" />
-            <column name="pathId" value="7"/>
             <column name="distance" value="413"/>
         </insert>
         <insert tableName="Route">
             <column name="fromCityId" value="7" />
             <column name="toCityId" value="3" />
-            <column name="transportType" value="SPECIAL" />
-            <column name="pathId" value="8"/>
             <column name="distance" value="413"/>
         </insert>
         <insert tableName="Route">
             <column name="fromCityId" value="7" />
             <column name="toCityId" value="8" />
-            <column name="transportType" value="SPECIAL" />
-            <column name="pathId" value="11"/>
             <column name="distance" value="184"/>
         </insert>
         <insert tableName="Route">
             <column name="fromCityId" value="8" />
             <column name="toCityId" value="7" />
-            <column name="transportType" value="SPECIAL" />
-            <column name="pathId" value="12"/>
             <column name="distance" value="184"/>
         </insert>
         <insert tableName="Route">
             <column name="fromCityId" value="3" />
             <column name="toCityId" value="8" />
-            <column name="transportType" value="SPECIAL" />
-            <column name="pathId" value="9"/>
             <column name="distance" value="545"/>
         </insert>
         <insert tableName="Route">
             <column name="fromCityId" value="8" />
             <column name="toCityId" value="3" />
-            <column name="transportType" value="SPECIAL" />
-            <column name="pathId" value="10"/>
             <column name="distance" value="545"/>
         </insert>
         <insert tableName="Route">
             <column name="fromCityId" value="1" />
             <column name="toCityId" value="7" />
-            <column name="transportType" value="SPECIAL" />
-            <column name="pathId" value="3"/>
             <column name="distance" value="419"/>
         </insert>
         <insert tableName="Route">
             <column name="fromCityId" value="7" />
             <column name="toCityId" value="1" />
-            <column name="transportType" value="SPECIAL" />
-            <column name="pathId" value="4"/>
             <column name="distance" value="419"/>
         </insert>
         <insert tableName="Route">
             <column name="fromCityId" value="1" />
             <column name="toCityId" value="8" />
-            <column name="transportType" value="SPECIAL" />
-            <column name="pathId" value="5"/>
             <column name="distance" value="598"/>
         </insert>
         <insert tableName="Route">
             <column name="fromCityId" value="8" />
             <column name="toCityId" value="1" />
-            <column name="transportType" value="SPECIAL" />
-            <column name="pathId" value="6"/>
             <column name="distance" value="598"/>
         </insert>
     </changeSet>

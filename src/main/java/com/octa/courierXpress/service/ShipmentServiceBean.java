@@ -1,16 +1,12 @@
 package com.octa.courierXpress.service;
 
-import com.octa.courierXpress.model.Person;
-import com.octa.courierXpress.model.Route;
-import com.octa.courierXpress.model.Shipment;
-import com.octa.courierXpress.model.ShipmentForUpdateDTO;
+import com.octa.courierXpress.model.*;
 import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Service;
-import com.octa.courierXpress.repository.CityRepository;
 import com.octa.courierXpress.repository.PersonRepository;
 import com.octa.courierXpress.repository.RouteRepository;
+import com.octa.courierXpress.repository.CityRepository;
 import com.octa.courierXpress.repository.ShipmentRepository;
 
 import java.util.List;
@@ -23,9 +19,9 @@ public class ShipmentServiceBean implements ShipmentService {
 
     private final ShipmentRepository shipmentRepository;
 
-    private final CityRepository cityRepository;
-
     private final PersonRepository personRepository;
+
+    private final CityRepository cityRepository;
 
     private final RouteRepository routeRepository;
 
@@ -57,10 +53,13 @@ public class ShipmentServiceBean implements ShipmentService {
         Person receiver= optionalReceiver.orElse(null);
         Optional<Route> optionalRoute= routeRepository.findById(shipment.getRoute().getId());
         Route route= optionalRoute.orElse(null);
+        Optional<Long> optionalCurrentCity = Optional.ofNullable(cityRepository.findByCityName(shipment.getRoute().getFromCity().getCityName()).getId());
+        Long currentCity = optionalCurrentCity.orElse(null);
 
         shipment.setSender(sender);
         shipment.setReceiver(receiver);
         shipment.setRoute(route);
+        shipment.setCurrentCity(currentCity);
 
         final Shipment savedShipment = shipmentRepository.save(shipment);
 

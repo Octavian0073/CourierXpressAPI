@@ -22,25 +22,17 @@
     </changeSet>
 
     <changeSet id="2" author="octa">
-        <createTable tableName="Path">
+        <createTable tableName="Paths">
             <column name="id" type="bigint(20)" autoIncrement="true">
                 <constraints primaryKey="true" nullable="false" />
             </column>
             <column name="fromCityId" type="bigint(20)">
                 <constraints references="city(id)" foreignKeyName="FK_Path_CityFromId" deleteCascade="false" nullable="true" />
             </column>
-            <column name="toCityId1" type="bigint(20)">
-                <constraints references="city(id)" foreignKeyName="FK_Path_CityToId1" deleteCascade="false" nullable="true" />
+            <column name="toCityId" type="bigint(20)">
+                <constraints references="city(id)" foreignKeyName="FK_Path_CityToId" deleteCascade="false" nullable="true" />
             </column>
-            <column name="toCityId2" type="bigint(20)">
-                <constraints references="city(id)" foreignKeyName="FK_Path_CityToId2" deleteCascade="false" nullable="true" />
-            </column>
-            <column name="toCityId3" type="bigint(20)">
-                <constraints references="city(id)" foreignKeyName="FK_Path_CityToId3" deleteCascade="false" nullable="true" />
-            </column>
-            <column name="toCityId4" type="bigint(20)">
-                <constraints references="city(id)" foreignKeyName="FK_Path_CityToId4" deleteCascade="false" nullable="true" />
-            </column>
+            <column name="distance" type="bigint(20)"/>
         </createTable>
     </changeSet>
 
@@ -54,12 +46,6 @@
             </column>
             <column name="toCityId" type="bigint(20)">
                 <constraints references="city(id)" foreignKeyName="FK_Route_CityToId" deleteCascade="false" nullable="false" />
-            </column>
-            <column name="transportType" type="varchar(100)" defaultValue="">
-                <constraints nullable="false" />
-            </column>
-            <column name="pathId" type="bigint(20)">
-                <constraints references="path(id)" foreignKeyName="FK_Route_PathId" deleteCascade="false" nullable="true" />
             </column>
             <column name="distance" type="bigint(20)"/>
         </createTable>
